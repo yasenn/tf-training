@@ -7,7 +7,7 @@ style: |
     font-size: 30px;
   }
 ---
-# Terraform: Infrastructure as Code 
+# Terraform: Infrastructure as Code [GitHub - kinabalu/terraform_infrastructure_as_code](https://github.com/kinabalu/terraform_infrastructure_as_code)
 ## Part1 : Intro
 
 ### Anatoly Burnashev
@@ -17,17 +17,17 @@ Senior System Engineer, DevOps Lead
 ---
 # Agenda
 
-- Infrastructure as code
+- Infrastructure as code [Infrastructure as code - Wikipedia](https://en.wikipedia.org/wiki/Infrastructure_as_code)
 - Terraform configuration
 
 ---
 # Evolution of Management IaC
 
 - Manual(documentation?)
-- Scripts
+- Scriptsfrastructure as cod
 - Scripts of Scripts: 
-- CMS (Configuration Management Software)
-- Infrastructure as code
+- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) )
+- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
 - Immutable Infrastructure
 
 ---
@@ -36,9 +36,31 @@ Senior System Engineer, DevOps Lead
 - Manual(documentation?)
 - Scripts
 - Scripts of Scripts: 
-     - sshkit, fabric2/3, etc...
-- CMS (Configuration Management Software)
-- Infrastructure as code
+     - [sshkit](https://github.com/capistrano/sshkit)
+     - [pssh](http://www.theether.org/pssh/)
+     - [sshpt](http://code.google.com/p/sshpt/)
+     - [ClusterSSH](http://clusterssh.sourceforge.net/)
+     - [Fabric](http://fabfile.org/)
+     - [Func](https://fedorahosted.org/func/)
+     - [MCollective](https://puppetlabs.com/mcollective/)
+     - etc...
+
+- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) )
+- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+- Immutable Infrastructure
+
+---
+# Evolution of Management IaC
+
+- Manual(documentation?)
+- Scripts
+- Scripts of Scripts: 
+- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) ) 
+     - [CFEngine](https://github.com/cfengine) (C) since 1993
+     - [LCFG](https://en.wikipedia.org/wiki/LCFG) (Perl) since 1994
+     - SwitchTower aka [Capistrano](http://capistranorb.com/) (Ruby) since 2005
+     - [Ansible](https://github.com/ansible) (Python) since 2012
+- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
 - Immutable Infrastructure
 
 ---
@@ -48,27 +70,13 @@ Senior System Engineer, DevOps Lead
 - Scripts
 - Scripts of Scripts: 
 - CMS (Configuration Management Software)
-     - CFEngine (C) since 1993
-     - LCFG (Perl) since 1994
-     - SwitchTower aka Capistrano (Ruby) since 2005
-     - Ansible (Python) since 2012
 - Infrastructure as code
-- Immutable Infrastructure
-
----
-# Evolution of Management IaC
-
-- Manual(documentation?)
-- Scripts
-- Scripts of Scripts: 
-- CMS (Configuration Management Software)
-- Infrastructure as code
-  - Chef (Ruby)
-  - Puppet (Clojure, Ruby)
-  - SaltStack (Python)
-  - CFEngine (C)
-  - Ansible Tower (Python)
-  - Terraform (Go)
+  - [Chef](https://github.com/chef/) (Ruby)
+  - [Puppet](https://github.com/puppetlabs/) (Clojure, Ruby)
+  - [SaltStack](https://github.com/saltstack) (Python)
+  - [CFEngine](https://github.com/cfengine)(C)
+  - [Ansible Tower](https://ru.wikipedia.org/wiki/Ansible#Ansible_Tower)(Python)
+  - [Terraform](https://github.com/hashicorp/terraform)(Go)
 - Immutable Infrastructure
 
 ---
@@ -81,7 +89,7 @@ Senior System Engineer, DevOps Lead
 ---
 # Mutability trade-offs
 
-| FE | BE | Nginx | PostgreSQL |
+| FE | BE | [Nginx](https://github.com/nginx) | [PostgreSQL](https://www.postgresql.org/) |
 |----|----|-------|------------|
 | 1  | 1  | 1.6   | 12         |
 | 1  | 1  | 1.8   | 12         |
@@ -112,8 +120,8 @@ Senior System Engineer, DevOps Lead
   - Fast provisioning
   - From custom images
   - Well API-automated creation and destruction
-- Automated CI/CD
-- SOA -> IaaS, PaaS
+- Automated [CI](https://en.wikipedia.org/wiki/Continuous_integration)/[CD](https://en.wikipedia.org/wiki/Continuous_delivery)
+- SOA[Service-oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture) -> [Iaas](https://en.wikipedia.org/wiki/Infrastructure_as_a_service), [Paas](https://en.wikipedia.org/wiki/Platform_as_a_service)
 - Stateless approach
 - Persistent Data Layer
 - DevOps Culture
@@ -157,7 +165,7 @@ Two methods of Delivery
 # Tools
 
 | Configuration management          | Infrastructure provisioning         |
-| Ansible, Chef, Puppet, SaltStack  | Terraform, CloudFormation, Heat     |
+| [Ansible](https://github.com/ansible), [Chef](https://github.com/chef/), [Puppet](https://github.com/puppetlabs/), [SaltStack](https://github.com/saltstack)  | [Terraform](https://github.com/hashicorp/terraform), [CloudFormation](https://github.com/aws-cloudformation), [Heat](https://github.com/MarouenMechtri/OpenStack-Heat-Installation/blob/master/OpenStack-Heat-Installation.rst)     |
 |-----------------------------------|-------------------------------------|
 | OS Configuration                  | Infrastructure Automation           |
 | Application Installation          | VM and Cloud Provisioning           |
@@ -180,10 +188,10 @@ Two methods of Delivery
 # Q/As @ Stack Exchange
 | Tool                            | Result | Tag  |
 |---------------------------------|--------|------|
-| Terraform                       | 14,733 | 4971 |
-| CloudFormation                  | 9,547  | 4557 |
-| Azure Resource Templates        | 1801   | 1806 |
-| Google Cloud Deployment Manager | 250    | 174  |
+| [Terraform](https://www.terraform.io/)                       | 14,733 | 4971 |
+| [CloudFormation](https://docs.aws.amazon.com/cloudformation/index.html)                  | 9,547  | 4557 |
+| [Azure Resource Templates](https://azure.microsoft.com/en-us/resources/templates/)        | 1801   | 1806 |
+| [Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager) | 250    | 174  |
 
 ---
 
@@ -201,9 +209,9 @@ The key features of Terraform are:
 
 # Terraform Use-cases
 src: https://www.terraform.io/intro/use-cases.html
-## Heroku App Setup
+## [Heroku](https://github.com/heroku) App Setup
 Terraform can be used to codify the setup required for a Heroku application, ensuring that all the required add-ons are available, configuring DNSimple to set a CNAME, or setting up Cloudflare as a CDN for the app without using a web interface.
-## Multi-Tier Applications
+## [Multi-Tier architecture](https://en.wikipedia.org/wiki/Multitier_architecture)
 With Terraform each tier of N-tier architecture can be described as a collection of resources, and the dependencies between each tier are handled automatically; Terraform will ensure the database tier is available before the web servers are started.
 ##  Self-Service Clusters
 Terraform configurations can be shared within an organization enabling customer teams to use the configuration as a black box and use Terraform as a tool to manage their services.
@@ -212,8 +220,7 @@ Terraform configurations can be shared within an organization enabling customer 
 ##  Software Demos
 Software writers can provide a Terraform configuration to create, provision and bootstrap a demo on cloud providers like AWS, which allows users to easily demo the software on their own infrastructure.
 ##  Disposable Environments
-Using Terraform, the production environment can be codified and then shared with staging, QA or dev. These configurations can be used to rapidly spin up new environments to test in, and then be easily disposed of, which can help to maintain parallel environments.
-##  Software Defined Networking
+Using Terraform, the production environment can be codified and then shared with staging, QA or dev. These configurations can be used to rapidly spin up new environments to test in, and then be easily disposed of, which can help to maintain parallel environments.##  Software Defined Networking
 Terraform can be used to codify the configuration for software defined networks, which can then be used by Terraform to automatically setup and modify settings by interfacing with the control layer.
 
 # Terraform Use-cases
@@ -234,7 +241,7 @@ Terraform can be used to codify the configuration for software defined networks,
 
 One workflow to provision multi-vendor infrastructure.
 
-200+ available providers for a broad set of common infrastructure. Provider SDK makes it simple to create new and custom providers.
+200+ available providers for a broad set of common infrastructure. Provider [SDK](https://en.wikipedia.org/wiki/Software_development_kit) makes it simple to create new and custom providers.
 
 Use best of features from different providers and compose them in a single logical topology.
 
@@ -252,11 +259,11 @@ Use best of features from different providers and compose them in a single logic
 - HCL attempts to strike a compromise between generic serialization formats such as YAML and configuration formats built around full programming languages such as Ruby
 
 ---
-# go
+# [go](https://en.wikipedia.org/wiki/Go_(programming_language))
 
-- Knowledge of the Go language is not required, but it’s better to able for reading provider code.
+- Knowledge of the [Go language](https://en.wikipedia.org/wiki/Go_(programming_language)) is not required, but it’s better to able for reading provider code.
 - Provider code is a very subtle layer for cloud or service API.
-- Providers themselves are executable files that communicate with TF via gRPC.
+- Providers themselves are executable files that communicate with TF via [gRPC](https://github.com/grpc).
 - Each Resource implements CREATE, READ, UPDATE, and DELETE (CRUD) methods to manage itself, while Terraform Core manages a Resource Graph of all the resources declared in the configuration as well as their current state.
 
 ---
@@ -389,7 +396,7 @@ Terraform uses this local state to create plans and make changes to your infrast
 
 State is stored by default in a local file named `terraform.tfstate`.
 
-The state is in JSON format.
+The state is in [JSON](https://en.wikipedia.org/wiki/JSON) format.
 
 If you make a mistake modifying your state, the state CLI will always have a backup available for you that you can restore.
 
