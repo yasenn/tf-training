@@ -7,7 +7,7 @@ style: |
     font-size: 30px;
   }
 ---
-# Terraform: Infrastructure as Code [GitHub - kinabalu/terraform_infrastructure_as_code](https://github.com/kinabalu/terraform_infrastructure_as_code)
+# Terraform: Infrastructure as Code 
 ## Part1 : Intro
 
 ### Anatoly Burnashev
@@ -17,17 +17,17 @@ Senior System Engineer, DevOps Lead
 ---
 # Agenda
 
-- Infrastructure as code [Infrastructure as code - Wikipedia](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+- Infrastructure as code
 - Terraform configuration
 
 ---
 # Evolution of Management IaC
 
 - Manual(documentation?)
-- Scriptsfrastructure as cod
+- Scripts
 - Scripts of Scripts: 
-- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) )
-- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+- CMS (Configuration Management Software)
+- Infrastructure as code
 - Immutable Infrastructure
 
 ---
@@ -36,17 +36,9 @@ Senior System Engineer, DevOps Lead
 - Manual(documentation?)
 - Scripts
 - Scripts of Scripts: 
-     - [sshkit](https://github.com/capistrano/sshkit)
-     - [pssh](http://www.theether.org/pssh/)
-     - [sshpt](http://code.google.com/p/sshpt/)
-     - [ClusterSSH](http://clusterssh.sourceforge.net/)
-     - [Fabric](http://fabfile.org/)
-     - [Func](https://fedorahosted.org/func/)
-     - [MCollective](https://puppetlabs.com/mcollective/)
-     - etc...
-
-- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) )
-- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+     - sshkit, fabric2/3, etc...
+- CMS (Configuration Management Software)
+- Infrastructure as code
 - Immutable Infrastructure
 
 ---
@@ -55,12 +47,12 @@ Senior System Engineer, DevOps Lead
 - Manual(documentation?)
 - Scripts
 - Scripts of Scripts: 
-- CMS ( [Configuration Management Software](https://en.wikipedia.org/wiki/Software_configuration_management) ) 
-     - [CFEngine](https://github.com/cfengine) (C) since 1993
-     - [LCFG](https://en.wikipedia.org/wiki/LCFG) (Perl) since 1994
-     - SwitchTower aka [Capistrano](http://capistranorb.com/) (Ruby) since 2005
-     - [Ansible](https://github.com/ansible) (Python) since 2012
-- [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+- CMS (Configuration Management Software)
+     - CFEngine (C) since 1993
+     - LCFG (Perl) since 1994
+     - SwitchTower aka Capistrano (Ruby) since 2005
+     - Ansible (Python) since 2012
+- Infrastructure as code
 - Immutable Infrastructure
 
 ---
@@ -71,12 +63,12 @@ Senior System Engineer, DevOps Lead
 - Scripts of Scripts: 
 - CMS (Configuration Management Software)
 - Infrastructure as code
-  - [Chef](https://github.com/chef/) (Ruby)
-  - [Puppet](https://github.com/puppetlabs/) (Clojure, Ruby)
-  - [SaltStack](https://github.com/saltstack) (Python)
-  - [CFEngine](https://github.com/cfengine)(C)
-  - [Ansible Tower](https://ru.wikipedia.org/wiki/Ansible#Ansible_Tower)(Python)
-  - [Terraform](https://github.com/hashicorp/terraform)(Go)
+  - Chef (Ruby)
+  - Puppet (Clojure, Ruby)
+  - SaltStack (Python)
+  - CFEngine (C)
+  - Ansible Tower (Python)
+  - Terraform (Go)
 - Immutable Infrastructure
 
 ---
@@ -89,7 +81,7 @@ Senior System Engineer, DevOps Lead
 ---
 # Mutability trade-offs
 
-| FE | BE | [Nginx](https://github.com/nginx) | [PostgreSQL](https://www.postgresql.org/) |
+| FE | BE | Nginx | PostgreSQL |
 |----|----|-------|------------|
 | 1  | 1  | 1.6   | 12         |
 | 1  | 1  | 1.8   | 12         |
@@ -120,8 +112,8 @@ Senior System Engineer, DevOps Lead
   - Fast provisioning
   - From custom images
   - Well API-automated creation and destruction
-- Automated [CI](https://en.wikipedia.org/wiki/Continuous_integration)/[CD](https://en.wikipedia.org/wiki/Continuous_delivery)
-- SOA[Service-oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture) -> [Iaas](https://en.wikipedia.org/wiki/Infrastructure_as_a_service), [Paas](https://en.wikipedia.org/wiki/Platform_as_a_service)
+- Automated CI/CD
+- SOA -> IaaS, PaaS
 - Stateless approach
 - Persistent Data Layer
 - DevOps Culture
@@ -165,7 +157,8 @@ Two methods of Delivery
 # Tools
 
 | Configuration management          | Infrastructure provisioning         |
-| [Ansible](https://github.com/ansible), [Chef](https://github.com/chef/), [Puppet](https://github.com/puppetlabs/), [SaltStack](https://github.com/saltstack)  | [Terraform](https://github.com/hashicorp/terraform), [CloudFormation](https://github.com/aws-cloudformation), [Heat](https://github.com/MarouenMechtri/OpenStack-Heat-Installation/blob/master/OpenStack-Heat-Installation.rst)     |
+|-----------------------------------|-------------------------------------|
+| Ansible, Chef, Puppet, SaltStack  | Terraform, CloudFormation, Heat     |
 |-----------------------------------|-------------------------------------|
 | OS Configuration                  | Infrastructure Automation           |
 | Application Installation          | VM and Cloud Provisioning           |
@@ -188,10 +181,10 @@ Two methods of Delivery
 # Q/As @ Stack Exchange
 | Tool                            | Result | Tag  |
 |---------------------------------|--------|------|
-| [Terraform](https://www.terraform.io/)                       | 14,733 | 4971 |
-| [CloudFormation](https://docs.aws.amazon.com/cloudformation/index.html)                  | 9,547  | 4557 |
-| [Azure Resource Templates](https://azure.microsoft.com/en-us/resources/templates/)        | 1801   | 1806 |
-| [Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager) | 250    | 174  |
+| Terraform                       | 14,733 | 4971 |
+| CloudFormation                  | 9,547  | 4557 |
+| Azure Resource Templates        | 1801   | 1806 |
+| Google Cloud Deployment Manager | 250    | 174  |
 
 ---
 
@@ -209,25 +202,55 @@ The key features of Terraform are:
 
 # Terraform Use-cases
 src: https://www.terraform.io/intro/use-cases.html
-## [Heroku](https://github.com/heroku) App Setup
+## Heroku App Setup
+
 Terraform can be used to codify the setup required for a Heroku application, ensuring that all the required add-ons are available, configuring DNSimple to set a CNAME, or setting up Cloudflare as a CDN for the app without using a web interface.
-## [Multi-Tier architecture](https://en.wikipedia.org/wiki/Multitier_architecture)
+---
+
+# Terraform Use-cases
+src: https://www.terraform.io/intro/use-cases.html
+## Multi-Tier Applications
+
 With Terraform each tier of N-tier architecture can be described as a collection of resources, and the dependencies between each tier are handled automatically; Terraform will ensure the database tier is available before the web servers are started.
+---
+
+# Terraform Use-cases
+src: https://www.terraform.io/intro/use-cases.html
 ##  Self-Service Clusters
+
 Terraform configurations can be shared within an organization enabling customer teams to use the configuration as a black box and use Terraform as a tool to manage their services.
+
+---
 
 # Terraform Use-cases
 ##  Software Demos
+
 Software writers can provide a Terraform configuration to create, provision and bootstrap a demo on cloud providers like AWS, which allows users to easily demo the software on their own infrastructure.
+---
+
+# Terraform Use-cases
+src: https://www.terraform.io/intro/use-cases.html
 ##  Disposable Environments
-Using Terraform, the production environment can be codified and then shared with staging, QA or dev. These configurations can be used to rapidly spin up new environments to test in, and then be easily disposed of, which can help to maintain parallel environments.##  Software Defined Networking
+
+Using Terraform, the production environment can be codified and then shared with staging, QA or dev. These configurations can be used to rapidly spin up new environments to test in, and then be easily disposed of, which can help to maintain parallel environments.
+---
+
+# Terraform Use-cases
+src: https://www.terraform.io/intro/use-cases.html
+##  Software Defined Networking
+
 Terraform can be used to codify the configuration for software defined networks, which can then be used by Terraform to automatically setup and modify settings by interfacing with the control layer.
+
+---
 
 # Terraform Use-cases
 ##  Resource Schedulers
+
  Resource schedulers can be treated as a provider, this allows Terraform to be used in layers: to setup the physical infrastructure running the schedulers as well as provisioning onto the scheduled grid.
-##  Multi-Cloud Deployment
- Terraform is cloud-agnostic and allows a single configuration to be used to manage multiple providers. This simplifies management, helping operators build large-scale multi-cloud infrastructures. (edited) 
+---
+
+# Terraform Use-cases
+src: https://www.terraform.io/intro/use-cases.html
 
 ---
 # Terraform
@@ -241,16 +264,17 @@ Terraform can be used to codify the configuration for software defined networks,
 
 One workflow to provision multi-vendor infrastructure.
 
-200+ available providers for a broad set of common infrastructure. Provider [SDK](https://en.wikipedia.org/wiki/Software_development_kit) makes it simple to create new and custom providers.
+200+ available providers for a broad set of common infrastructure. Provider SDK makes it simple to create new and custom providers.
 
 Use best of features from different providers and compose them in a single logical topology.
 
 ---
 # Terraform Product Line
 
-|Open Source|Terraform Cloud|Terraform Enterprise|
-|-----------|---------------|--------------------|
-|Infrastructure as code provisioning and management for any infrastructure|Collaboration and automation for practitioners and small teams using Terraform|Private installation of Terraform with collaboration, policy & governance, and self-service infrastructure for organizations|
+| Open Source                                                               | Terraform Cloud                                                                | Terraform Enterprise                                                                                                         |
+|---------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Infrastructure as code provisioning and management for any infrastructure | Collaboration and automation for practitioners and small teams using Terraform | Private installation of Terraform with collaboration, policy & governance, and self-service infrastructure for organizations |
+|                                                                           |                                                                                |                                                                                                                              |
 
 ---
 # Hashicorp Configuration Language
@@ -259,11 +283,11 @@ Use best of features from different providers and compose them in a single logic
 - HCL attempts to strike a compromise between generic serialization formats such as YAML and configuration formats built around full programming languages such as Ruby
 
 ---
-# [go](https://en.wikipedia.org/wiki/Go_(programming_language))
+# go
 
-- Knowledge of the [Go language](https://en.wikipedia.org/wiki/Go_(programming_language)) is not required, but it’s better to able for reading provider code.
+- Knowledge of the Go language is not required, but it’s better to able for reading provider code.
 - Provider code is a very subtle layer for cloud or service API.
-- Providers themselves are executable files that communicate with TF via [gRPC](https://github.com/grpc).
+- Providers themselves are executable files that communicate with TF via gRPC.
 - Each Resource implements CREATE, READ, UPDATE, and DELETE (CRUD) methods to manage itself, while Terraform Core manages a Resource Graph of all the resources declared in the configuration as well as their current state.
 
 ---
@@ -279,7 +303,7 @@ Use best of features from different providers and compose them in a single logic
 - Semver and back compatibility
 
 ```bash
-~~ (fix release) $ wget 'https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip'
+$ wget 'https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip'
 $ unzip terraform_0.12.24_linux_amd64.zip 
 $ ./terraform version
 Terraform v0.12.24
@@ -396,7 +420,7 @@ Terraform uses this local state to create plans and make changes to your infrast
 
 State is stored by default in a local file named `terraform.tfstate`.
 
-The state is in [JSON](https://en.wikipedia.org/wiki/JSON) format.
+The state is in JSON format.
 
 If you make a mistake modifying your state, the state CLI will always have a backup available for you that you can restore.
 
@@ -418,6 +442,17 @@ If you make a mistake modifying your state, the state CLI will always have a bac
   "resources": []
 }
 ```
+
+---
+# Remote backends
+src: [How to manage Terraform state. A guide to file layout, isolation, and… | by Yevgeniy Brikman | Gruntwork](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa)
+
+Remote backends solve all three of the issues listed above:
+
+1. **Manual error**: Once you configure a remote backend, Terraform will automatically load the state file from that backend every time you run `plan` or `apply` and it’ll automatically store the state file in that backend after each `apply`, so there’s no chance of manual error.
+2. **Locking**: Most of the remote backends natively support locking. To run `terraform apply`, Terraform will automatically acquire a lock; if someone else is already running `apply`, they will already have the lock, and you will have to wait. You can run `apply` with the `-lock-timeout=<TIME>` parameter to tell Terraform to wait up to `TIME` for a lock to be released (e.g., `-lock-timeout=10m` will wait for 10 minutes).
+3. **Secrets**: Most of the remote backends natively support encryption in transit and encryption on disk of the state file. Moreover, those backends usually expose ways to configure access permissions (e.g., using IAM policies with an S3 bucket), so you can control who has access to your state files and the secrets the may contain. It would still be better if Terraform natively supported encrypting secrets within the state file, but these remote backends reduce most of the security concerns, as at least the state file isn’t stored in plaintext on disk anywhere
+
 
 ---
 # aws_s3_bucket
