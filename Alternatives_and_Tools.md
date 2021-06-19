@@ -43,14 +43,12 @@ Two methods of Delivery
 ---
 # Tools
 
-| Configuration management          | Infrastructure provisioning         |
-|-----------------------------------|-------------------------------------|
-| Ansible, Chef, Puppet, SaltStack  | Terraform, CloudFormation, Heat     |
-|-----------------------------------|-------------------------------------|
-| OS Configuration                  | Infrastructure Automation           |
-| Application Installation          | VM and Cloud Provisioning           |
-| Declarative                       | Declarative                         |
-| Limited Infrastructure Automation | Limited OS Configuration Management |
+| Configuration Management Systems  	Ansible, Chef, Puppet, SaltStack | Infrastructure provisioning    	Terraform, CloudFormation, Heat |
+|----------------------------------------------------------------------|-----------------------------------------------------------------|
+| OS Configuration                                                     | Infrastructure Automation                                       |
+| Application Installation                                             | VM and Cloud Provisioning                                       |
+| Declarative                                                          | Declarative                                                     |
+| Limited Infrastructure Automation                                    | Limited OS Configuration Management                             |
 
 ---
 # Tools
@@ -63,7 +61,6 @@ Two methods of Delivery
 | SaltStack | Declarative & Imperative | Push and Pull    |
 | Terraform | Declarative              | Push             |
 
-- `*` there is a module [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)
 ---
 # Q/As @ Stack Exchange
 | Tool                            | Result | Tag  |
@@ -120,7 +117,7 @@ resource "aws_subnet" "tfer--subnet-002D-0e487974" {
 
 ### Find the odd one
 
-![height:300px](images/terraform_hashicorp_suite.webp)
+![hashicorp_suite.webp height:500px](images/terraform_hashicorp_suite.webp)
 
 ---
 # HashiCorp Suite
@@ -159,10 +156,9 @@ $ source terraform.completion.bash
 ---
 # Blast Radius
 
-[28mm/blast-radius: Interactive visualizations of Terraform dependency graphs using d3.js](https://github.com/28mm/blast-radius)
-![height:450px](images/terraform_blast_radius.png)
+![height:250px](images/terraform_blast_radius.png)
 
-_Blast Radius_ is a tool for reasoning about [Terraform](https://www.terraform.io/) dependency graphs with interactive visualizations.
+[_Blast Radius_ ](https://github.com/28mm/blast-radius)is a tool for reasoning about [Terraform](https://www.terraform.io/) dependency graphs with interactive visualizations.
 
 Use _Blast Radius_ to:
 
@@ -171,13 +167,10 @@ Use _Blast Radius_ to:
 * **Reason** about relationships between resources and evaluate changes to them
 * **Interact** with the diagram below (and many others) [in the docs](https://28mm.github.io/blast-radius-docs/)
 
-[![screenshot](https://github.com/28mm/blast-radius/raw/master/doc/blastradius-interactive.png)](https://github.com/28mm/blast-radius/blob/master/doc/blastradius-interactive.png)
-
 ---
-# Cloudcraft: Overview
+# [Cloudcraft](https://www.cloudcraft.co/)
 
-![height:450px](images/terraform_Cloudcraft.png)
-[Cloudcraft – Draw AWS diagrams](https://www.cloudcraft.co/)
+![height:250px](images/terraform_Cloudcraft.png)
 
 Create a professional architecture diagram in minutes with the Cloudcraft visual designer, optimized for AWS with smart components.  
   
@@ -204,4 +197,3 @@ inputs = {
   # type: string
   allocated_storage = "5"
 ```
-
