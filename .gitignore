@@ -36,3 +36,4 @@ terraform.rc
 # Generated Content 
 *.html
 *.pdf
+.obsidian
