@@ -341,6 +341,31 @@ Finished in 0.9023 seconds (files took 4.8 seconds to load)
 - Terratest(testify for infrastructure)
 
 ---
+# 3 Terraform Testing Strategies for Ultra-Reliable Infrastructure-as-Code
+
+## Obtaining code coverage is hard
+
+Unlike most programming languages or mature configuration management frameworks like Chef, Terraform doesn't yet have a framework for obtaining a percentage of configurations that have a matching integration test. This means that teams that choose to embark on this journey need to be fastidious about maintaining a high bar for code coverage and will likely write tools themselves that can do this (such as scanning all module references and looking for a matching spec definition).
+
+## Pipeline and tools
+![DevTestOps pipeline](https://cdn.sanity.io/images/hgftikht/production/291c426fa5b3908ff9e38523131b6217554243ab-558x443.png?fm=webp)
+* http://www.contino.io/insights/a-model-for-scaling-terraform-workflows-in-a-large-complex-organization
+* https://github.com/chef/inspec
+* https://blog.codeship.com/immutable-infrastructure/
+* https://medium.com/android-testing-daily/unit-test-vs-integration-tes-fba13b92fbf6
+* https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html
+* https://github.com/newcontext-oss/kitchen-terraform
+* https://github.com/aelsabbahy/goss
+* It is heavily inspired by [serverspec](https://github.com/mizzy/serverspec), which accomplishes much the same thing (except the cool health-check webserver) and works seamlessly with Ruby
+* https://github.com/rspec/rspec :
+  * It’s easy to read - We use natural English-like statements to express what the test is, what it's doing and what it should do.
+  * It’s quick - Once we generate our Terraform plan (more on how to do this soon), this test runs in less than a second. There is no sandbox to query or AWS API calls to make; we're simply comparing what we wrote against what Terraform generated from that.
+  * It’s easy to write - With a few caveats (see the Disadvantages section), all of these test examples are straight from RSpec's documentatio
+* [Advantages](https://www.contino.io/insights/top-3-terraform-testing-strategies-for-ultra-reliable-infrastructure-as-code)
+
+src: [Top 3 Terraform Testing Strategies for Ultra-Reliable Infrastructure-as-Code](https://www.contino.io/insights/top-3-terraform-testing-strategies-for-ultra-reliable-infrastructure-as-code)
+
+---
 # Test your Infrastructure with DevTestOps
 
 [TCH NOW - Test your infrastructure! | Pawel Piwosz, EPAM Systems ](https://content.sonatype.com/2020addo/addo2020-cicd-piwosz)
@@ -349,6 +374,7 @@ Finished in 0.9023 seconds (files took 4.8 seconds to load)
 # Lessons learned from testing Over 200,000 lines of Infrastructure Code | Lev Goncharov
 
 [Lessons learned from testing Over 200,000 lines of Infrastructure Code | Lev Goncharov](http://www.goncharov.xyz/it/200k_iac.html)
+
 
 ---
 # Terraformer
