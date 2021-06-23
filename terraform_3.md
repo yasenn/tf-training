@@ -377,6 +377,41 @@ src: [Top 3 Terraform Testing Strategies for Ultra-Reliable Infrastructure-as-Co
 
 
 ---
+# TF Compliance tests
+terraform-compliance is a lightweight, security and compliance focused test framework against terraform to enable negative testing capability for your infrastructure-as-code.
+
+* compliance: Ensure the implemented code is following security standards, your own custom standards
+* behaviour driven development: We have BDD for nearly everything, why not for IaC ?
+* portable: just install it from pip or run it via docker. See Installation
+* pre-deploy: it validates your code before it is deployed
+* easy to integrate: it can run in your pipeline (or in git hooks) to ensure all deployments are validated.
+* segregation of duty: you can keep your tests in a different repository where a separate team is responsible
+src: [terraform-compliance](https://github.com/terraform-compliance/cli)
+
+## Idea
+terraform-compliance mainly focuses on negative testing instead of having fully-fledged functional tests that are mostly used for proving a component of code is performing properly.
+
+Fortunately, terraform is a marvellous abstraction layer for any API that creates/updates/destroys entities. terraform also provides the capability to ensure everything is up-to-date between the local configuration and the remote API(s) responses.
+
+Given the fact, terraform is used mostly against Cloud APIs, what was missing is to ensure your code against your infrastructure must follow specific policies. Currently HashiCorp provides Sentinel for Enterprise Products. terraform-compliance is providing a similar functionality only for terraform while it is free-to-use and it is Open Source.
+
+E.g. a sample policy could be, if you are working with AWS, you should not create an S3 bucket, without having any encryption. Of course, this is just an example which may or not be applicable for your case.
+
+terraform-compliance provides a test framework to create these policies that will be executed against your terraform plan in a context where both developers and security teams can understand easily while reading it, by applying Behaviour Driven Development Principles.
+
+As returning back to the example, our example defined above will be translated into a BDD Feature and Scenario, as also seen in below ;
+
+```
+if you are working with AWS, you should not create an S3 bucket, without having any encryption
+```
+
+translates into ;
+
+```
+Given I have AWS S3 Bucket defined
+Then it must contain server_side_encryption_configuration
+```
+---
 # Terraformer
 
 A CLI tool that generates tf/json and tfstate files based on existing infrastructure (reverse Terraform)
