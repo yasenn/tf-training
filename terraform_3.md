@@ -411,6 +411,12 @@ translates into ;
 Given I have AWS S3 Bucket defined
 Then it must contain server_side_encryption_configuration
 ```
+
+---
+# 2do Terraform Best Practices — Testing your code
+
+src: [Terraform Best Practices — Testing your code](https://medium.com/codex/terraform-best-practices-testing-your-code-f25053b06c4c)
+
 ---
 # Terraformer
 
