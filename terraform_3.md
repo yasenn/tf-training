@@ -460,6 +460,23 @@ resource "aws_subnet" "tfer--subnet-002D-0e487974" {
 ```
 
 ---
+# tfquery
+
+IaC is the de-facto today for documenting and deploying infrastructure on cloud providers. As the organization grows, it becomes really hard to understand and analyze the deployed infrastructure. Grepping and searching for resources in Terraform state files is not enough. Terraform Modules are automating processes dynamically for infrastructure deployment, so searching for static resources is also not feasible for good visibility.
+
+With tfquery, you can run SQL queries on Terraform state files, and gain the best possible visibility.
+
+[mazen160/tfquery: tfquery: Run SQL queries on your Terraform infrastructure. Query resources and analyze its configuration using a SQL-powered framework.](https://github.com/mazen160/tfquery)
+
+---
+# TerraGoat
+
+TerraGoat is Bridgecrew's "Vulnerable by Design" Terraform repository. TerraGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
+
+[bridgecrewio/terragoat: TerraGoat is Bridgecrew's "Vulnerable by Design" Terraform repository. TerraGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.](https://github.com/bridgecrewio/terragoat)
+[www.bridgecrew.io/](https://www.bridgecrew.io/ "https://www.bridgecrew.io/")
+
+---
 # Blast Radius
 
 [28mm/blast-radius: Interactive visualizations of Terraform dependency graphs using d3.js](https://github.com/28mm/blast-radius)
