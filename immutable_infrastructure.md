@@ -51,6 +51,9 @@ style: |
   - No configuration drift or snowflake servers
   - Consistent staging environments and easy horizontal scaling
   - Simple rollback and recovery processes
+  - Reduction of complexity
+  - Speed
+  - Accountability - versioned in Git
 
 ---
 # Immutable Infrastructure - How ?
