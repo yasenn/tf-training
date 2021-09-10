@@ -1,0 +1,3 @@
+[submodule "labs/diploma"]
+	path = labs/diploma
+	url = https://github.com/swanev/diploma
