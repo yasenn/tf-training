@@ -566,4 +566,12 @@ module "vpc" {
 A Demo prepared for the Minsk DevOps community open meetup - Terragrunt
 
 ---
+
+# 2do TF vs `boto`
+
+[aws-python-utilities/stop_start_ec2.py at main · hseera/aws-python-utilities](https://github.com/hseera/aws-python-utilities/blob/main/stop_start_ec2.py)
+
+> Script gives the capability to stop & start ec2 instanced based on instanceid, instance type or platform.
+
+---
 # End
