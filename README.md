@@ -1,14 +1,10 @@
-### Name
+### `IaC` & `Terraform` training
 
 Slides and labs for the `terraform` training.
 
 ### Description
 
-Short training to introduce to `terraform`
-
-### Installation
-
-### Usage
+Short training to introduce to `terraform` and `Infrstructure-as-a-code` approach
 
 ### Contributing
 
@@ -22,7 +18,3 @@ Initial release was provided by [@wrcomb](https;//github.com/wrcomb)
 ### License
 
 This project is licensed under Unlicense license. This license does not require you to take the license with you to your project.
-
-### Project status
-
-WIP
