@@ -197,3 +197,16 @@ inputs = {
   # type: string
   allocated_storage = "5"
 ```
+
+---
+# rover
+
+[im2nguyen/rover: Interactive Terraform visualization. State and configuration explorer.](https://github.com/im2nguyen/rover)
+
+Rover is a [Terraform](http://terraform.io/) visualizer.
+
+In order to do this, Rover:
+
+1. generates a [`plan`](https://www.terraform.io/docs/cli/commands/plan.html#out-filename) file and parses the configuration in the root directory or uses a provided plan.
+2. parses the `plan` and configuration files to generate three items: the resource overview (`rso`), the resource map (`map`), and the resource graph (`graph`).
+3. consumes the `rso`, `map`, and `graph` to generate an i
