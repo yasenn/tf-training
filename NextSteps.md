@@ -11,7 +11,7 @@
 ---
 ## MOOCs
 
-* [HashiCorp Certified: Terraform Associate 2021](https://www.udemy.com/course/terraform-beginner-to-advanced/) by Zeal Vora
+* [HashiCorp Certified: Terraform Associate 2021](https://www.udemy.com/course/terraform-beginner-to-advanced/) by Zeal Vora of Udemy
 * [HashiCorp Learn site](https://learn.hashicorp.com/terraform) by HashiCorp
 
 ---
