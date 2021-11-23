@@ -1,4 +1,3 @@
----
 # Books
 
 * [Terraform: Up & Running, 2nd Edition](https://www.terraformupandrunning.com/) by [Yevgeniy Brikman](https://medium.com/@brikis98)
