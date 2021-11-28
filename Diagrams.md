@@ -164,3 +164,9 @@ E.g: [Secure delivery of serverless applications | Stackery](https://www.stacker
 E.g: [lambda-refarch-webapp](https://www.stackery.io/registry/?repo=https://github.com/aws-samples/lambda-refarch-webapp/blob/master/template.yaml) # [aws-samples](https://github.com/aws-samples)/[lambda-refarch-webapp](https://github.com/aws-samples/lambda-refarch-webapp) The Web Application reference architecture is a general-purpose, event-driven, web application back-end that uses AWS Lambda, Amazon API Gateway for its business logic. It also uses Amazon DynamoDB as its database and Amazon Cognito for user management. All static content is hosted using AWS Amplify Console.
 
 E.g.: [gatsby-starter-ghost](https://www.stackery.io/registry/?repo=https://github.com/stackery/gatsby-starter-ghost/blob/master/template.yaml) # [stackery](https://github.com/stackery)/[gatsby-starter-ghost](https://github.com/stackery/gatsby-starter-ghost) A starter template to build lightning fast websites with Ghost & Gatsby 
+
+---
+# Ilograph
+
+* [Show HN: Ilograph – Interactive AWS Serverless Architecture Diagram](https://app.ilograph.com/demo.ilograph.Ilograph)
+* [Beyond Whiteboarding: Creating Expert System Architecture Diagrams](https://blog.ilograph.com/posts/beyond-whiteboarding-creating-expert-system-architecture-diagrams/)
