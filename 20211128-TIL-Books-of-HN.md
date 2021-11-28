@@ -1,0 +1,41 @@
+# Books of HN
+:HN:Books:
+
+## hackernewsbooks
+* [Top Hacker News Books of All Time](https://hackernewsbooks.com/top-books-on-hacker-news)
+* [Top Books Recommended by Founders and VCs](https://hackernewsbooks.com/top-business-books-from-interviews-with-600-founders-and-investors)
+* [Best Books for Learning Python Programming](https://hackernewsbooks.com/topics/learning-python-programming-books)
+* [Best Books for Learning Shell Programming](https://hackernewsbooks.com/topics/learning-shell-programming-books)
+* [Best Books for Learning SQL](https://hackernewsbooks.com/topics/learning-sql-programming-books)
+
+# 5 books that changed my career as a software engineer
+
+* [Books that changed my career as a software engineer | Hacker News](https://news.ycombinator.com/item?id=29364892)
+* [Blog by Juliano Lima](https://julianogtz.github.io/my-personal-blog/posts/five-books-that-changed-my-career-as-a-software-engineer)
+* [Reflections Of An Affirmative Action Baby : Carter, Stephen L.: Amazon.co.uk: Books](https://www.amazon.co.uk/dp/0465068693?tag=bestbooks02e-21&geniuslink=true)
+* [The Unwritten Laws Of Engineering : W. J. King : Free Download, Borrow, and Streaming : Internet Archive](https://archive.org/details/the-unwritten-laws-of-engineering/mode/2up)
+* [The Tao of Programming](https://www.mit.edu/~xela/tao.html)
+* [Principled Programming by Daniel Read - developer.*, Developer Dot Star](https://www.developerdotstar.com/mag/articles/read_princprog.html)
+* [Structure and Interpretation of Computer Programs, 2nd ed. - sicp.pdf](https://web.mit.edu/alexmv/6.037/sicp.pdf)
+* [How Will You Measure Your Life?: Clayton M. Christensen, James Allworth, Karen Dillon: Amazon.com: Books](https://www.amazon.com/How-Will-Measure-Your-Life/dp/0062102419)
+* [Clayton Christensen](https://claytonchristensen.com/ideas-in-action/books/)
+* [Writings That Shape My Thinking · deliberate software](http://deliberate-software.com/page/books/)
+* [Learning From Data - Online Course (MOOC)](https://work.caltech.edu/telecourse)
+* [Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
+* [Google - Site Reliability Engineering](https://sre.google/books/)
+* [[Free O'Reilly ebook] High Performance Browser Networking | NGINX](https://www.nginx.com/resources/library/high-performance-browser-networking/)
+* [Where to buy Designing Data-Intensive Applications (DDIA)](https://dataintensive.net/buy.html)
+* [Amazon.com: Developer Hegemony: The Future of Labor eBook : Dietrich, Erik, Muledy, Amanda: Kindle Store](https://www.amazon.com/dp/B0722H41SG)
+* [The Little Typer | The MIT Press](https://mitpress.mit.edu/books/little-typer)
+* [Systems Performance: Enterprise and the Cloud, 2nd Edition](https://www.brendangregg.com/blog/2020-07-15/systems-performance-2nd-edition.html)
+* [Systems Performance 2nd Edition Book](https://www.brendangregg.com/systems-performance-2nd-edition-book.html)
+* [BPF Performance Tools: Linux System and Application Observability (book)](https://www.brendangregg.com/blog/2019-07-15/bpf-performance-tools-book.html)
+* [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+* [Архитектура операционной системы UNIX](http://rus-linux.net/MyLDP/BOOKS/bach/contents.htm)
+* [Code: The Hidden Language of Computer Hardware and Software, by Charles Petzold](https://www.charlespetzold.com/code/)
+* [DDD Resources - Domain Language](https://www.domainlanguage.com/ddd/)
+* [Test Driven Development: By Example: Beck, Kent: 8601400403228: Amazon.com: Books](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530)
+* [Extreme Programming Explained: Embrace Change, 2nd Edition (The XP Series): Beck, Kent, Andres, Cynthia: 9780321278654: Amazon.com: Books](https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658)
+* [Rapid Development: Taming Wild Software Schedules: McConnell, Steve: 8580001137018: Amazon.com: Books](https://www.amazon.com/Rapid-Development-Taming-Software-Schedules/dp/1556159005)
+* [Mythical Man-Month, The: Essays on Software Engineering, Anniversary Edition: Brooks Jr., Frederick: 8580001065793: Amazon.com: Books](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959)
+* [A Philosophy of Software Design 1, Ousterhout, John K., eBook - Amazon.com](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout-ebook/dp/B07N1XLQ7D)
