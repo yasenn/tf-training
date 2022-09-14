@@ -71,6 +71,177 @@ Two methods of Delivery
 | Google Cloud Deployment Manager | 250    | 174  |
 
 ---
+
+# CloudFormation
+
+## About CF
+
+CloudFormation is the historical configuration management system offered by AWS. It operates around the concept of “stacks”. When you update a stack, you send a new template to the AWS service, the template is received, compared with the previous version stored (if any) and the difference is applied to your infrastructure. You then have tens of resources that are attached to your stack that should be managed only via infrastructure as code.
+
+![CloudFormation](https://miro.medium.com/max/1098/1*UBwKe67ABvoXhOM3qfuqLw.png)
+Credits: [Adevinta & AWS CloudFormation documentation](https://medium.com/adevinta-tech-blog/deprecating-aws-cloudformation-stacks-towards-terraform-105b85e79780)
+
+---
+
+# CloudFormation Pitfalls
+
+## An (in)complete modeling
+
+E.g., it is not possible to:
+
+- Define the settings related to Cognito UserPool for federation with an external IDP
+- Add a route to a routing table that points to a Transit Gateway
+- Implement SSH key provisioning for EC2 (probably for security reasons)
+
+### Workaround:
+
+You may **Extend the capabilities of AWS CloudFormation**using custom resources. In fact, they allow the deployment of a Lambda function and execute it as a “Custom Resource” at a given time during the creation of the stack.
+
+[Here is the official documentation of this feature.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html)
+
+
+---
+
+# CloudFormation Pitfalls
+
+## The whole stack is reapplied each time
+
+Which results in errors having a significant impact, such as the recreation of a database that destroys all your data in a snap or resetting the whole network base configuration (VPC), preventing anyone from connecting to your account in no time.
+
+So, prior to arriving at a working version, you have to go through numerous attempts, each having long execution times.
+
+On CloudFormation, when you apply a configuration change on a stack, you need to regenerate the whole manifest (“template”) even if your change only concerns 1% of the stack (like a basic DNS record creation). This requires you to maintain complex manifests for a long time.
+
+---
+
+# CloudFormation Pitfalls
+
+
+- A single failure rolls back all stack changes
+
+There’s no sequencing while pushing the changes and it only takes one change to fail, causing CloudFormation to try and revert all your changes, which means accepted changes are also lost.
+
+
+---
+
+# CloudFormation Pitfalls
+
+
+- CloudFormation applies your changes blindly
+
+CloudFormation will only compare the new template submitted with the previous one, then apply the difference, without checking if any other modification took place. Any manual changes will be ignored and erased.
+
+---
+
+# CloudFormation Pitfalls
+
+### Unintelligible errors
+
+Error messages are often meaningless, misleading, useless, or simply wrong.
+
+One can only be certain that the stack has failed. **What has actually failed and why is as useful to know as it is difficult to find out.**
+
+The only way to quickly find the reason for failure is to **analyze the execution log** to see exactly on which resource an error is found, and when the provisioning for that resource occurred.
+
+
+---
+
+# CloudFormation Pitfalls
+
+
+
+- The CloudFormation manifests are long and painful to write
+
+The files ingested by CloudFormation are declarative JSON files, which are long, requiring several lines of code where a missing comma can invalidate the whole document. There’s also no validation service available until you attempt to effectively create the stack (or create a ChangeSet on existing stacks).
+
+Even software meant to simplify manifest generation (Troposphere library) had its own complexities so AWS released a custom SDK (the CDK) available in several languages.
+
+
+---
+
+# CloudFormation Pitfalls
+
+[AWS CloudFormation: the “top 5” reasons for not using it - Proud2beCloud Blog](https://www.proud2becloud.com/aws-cloudformation-the-top-5-reasons-for-not-using-it/)
+
+### Hard limit to 200 resources per stack
+
+It is not possible to create more than 200 resources in a single stack.
+
+Many argue that this is not a problem at all and that it is easily circumvented with common sense. After all, why should you create more than 200 things at a time?
+
+**The problem lies in what is defined as a “resource”;** in fact, there are many objects that are normally invisible while creating resources from the web console. When creating a simple infrastructure with a dozen lambdas, an API Gateway with relative policies, and some additional resources, **the hard limit can be easily reached.**
+
+**The microservices should be small, and a complex application should, therefore, consist of multiple CloudFormation stacks…** however, even having many stacks becomes burdensome from an organizational and management point of view, thus **it is better to measure the amount of resources to be included in a single template** well, and to develop a strategy to partition a complex architecture.
+
+---
+
+# CloudFormation Pitfalls
+
+## Stateful Resource Management
+
+When using AWS CloudFormation to update stateful resources such as DynamoDB, S3, RDS and R53 it is possible to modify attributes within a CloudFormation stack that require replacement. This can lead to the resource being deleted and a new one created, which can cause huge problems if done in production.
+
+Accidental deletion can be avoided using the retain deletion policy, as shown [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html). However, this would then require management of the resource outside CloudFormation or importing the resource back into the stack.
+
+It is also possible to hit edge cases in AWS CloudFormation that can break the stack due to the complexity of managing infrastructure. When this happens the recommended solution from AWS is usually to delete the stack and create it again, however doing this in production can be complex and risky.
+
+The risk of accidently deleting databases and the complexity of importing/exporting state is enough for me to recommend using APIs directly over CloudFormation for any stateful resource.
+
+---
+
+# CloudFormation Pitfalls
+
+## Region Bound Stacks
+
+Firstly, AWS CloudFormation templates are always deployed within a region. This can become confusing to manage for global resources as it isn’t always apparent where to look for the stack.
+
+Secondly, cross region connectivity can become complicated when using CloudFormation. The sequencing of changes managed by CloudFormation only works within a stack. When resources in multiple regions (such as security groups and peering connections) need to connect extra work is required in addition to CloudFormation. This can be resolved with code to manage the CloudFormation Stacks, but in my experience it is easier to manage these resources directly with the APIs.
+
+---
+
+# CloudFormation Pitfalls
+
+## Nested Stacks
+
+AWS CloudFormation can use nested stacks to allow for re-use of templates within a stack but it causes more problems than it solves.
+
+AWS CloudFormation is generally slow to deploy resources and this gets much worse when using nested stacks. The more nesting is used the slower deployments get due to the overheads of CloudFormation.
+
+Another issue that arises when using nested stacks is failure recovery. As stacks get bigger and more complicated the risk of failures increases, and when AWS CloudFormation fails, it fails hard. This usually requires a complete teardown and rebuild, which can lead to manual work with outages.
+
+![Nested Stacks](https://miro.medium.com/max/483/1*Ndqj5H-bjiVNcCa05NeHNw.png)
+
+
+---
+
+# CloudFormation Pitfalls
+## Exported Output Values
+
+AWS CloudFormation stacks can output values from resources for other stacks to consume. This seems like a helpful tool, however using any of these values will prevent you from modifying the value or deleting the stack. Depending on the value this could be helpful, but generally it leads to drastically increased complexity in managing stack dependencies.
+
+---
+
+# CloudFormation Pitfalls
+
+## Secret Management
+
+AWS CloudFormation cannot manage certain resources such as EC2 SSH keys due to the risk of exposing the secret values within the resource state. It is also risky to include any secrets within a stack such as in AWS Lambda environment variables, EC2 instance userdata, etc. This is due to the CloudFormation API storing all parameters and the template which is accessible in the AWS console and CloudFormation API.
+
+
+---
+
+# CloudFormation Pitfalls
+
+## Cloudformation drift detection
+
+AWS CloudFormation’s drift detection was loudly requested by many users, and consists of the ability to **automatically detect if changes were made to the configuration of the stack resources outside CloudFormation** via the AWS management console, the CLI and the SDK
+
+This is a very useful feature, unfortunately, in practice, it gives many false positives. In general, it indicates that it is likely that something has been modified externally and, therefore, that the stack can no longer be updated automatically. **Unfortunately, it does not indicate that the stack is not actually editable.**
+
+It is best not to consider it as a reliable indication, at least for now.
+
+
+---
 # Terraformer
 
 A CLI tool that generates tf/json and tfstate files based on existing infrastructure (reverse Terraform)
