@@ -170,3 +170,14 @@ E.g.: [gatsby-starter-ghost](https://www.stackery.io/registry/?repo=https://gith
 
 * [Show HN: Ilograph – Interactive AWS Serverless Architecture Diagram](https://app.ilograph.com/demo.ilograph.Ilograph)
 * [Beyond Whiteboarding: Creating Expert System Architecture Diagrams](https://blog.ilograph.com/posts/beyond-whiteboarding-creating-expert-system-architecture-diagrams/)
+
+---
+# inkdrop-visualizer
+
+Visualizes your Terraform - [inkdrop.ai/](https://inkdrop.ai/)
+
+Inkdrop is a CLI tool that creates interactive diagrams to visualize your Terraform. It helps you onboard engineers, generate documentation and understand dependencies faster.
+
+https://github.com/inkdrop-org/inkdrop-visualizer
+
+![Inkdrop Screenshot](https://github.com/inkdrop-org/inkdrop-visualizer/assets/86591160/5de99a85-2636-40c8-b82d-7f64c7dc7178)
