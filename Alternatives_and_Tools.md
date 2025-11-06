@@ -368,3 +368,25 @@ inputs = {
   # type: string
   allocated_storage = "5"
 ```
+
+---
+
+[usenabla-com/hayashi: A Rust-based diagramming-as-code API that allows you to turn your .tfstate file into details architecture boundary diagrams.](https://github.com/usenabla-com/hayashi)
+
+A Rust-based diagramming-as-code API that allows you to turn your .tfstate file into details architecture boundary diagrams.
+
+---
+
+![bg contain](https://github.com/usenabla-com/hayashi/raw/main/diagram.png)
+
+
+---
+
+[usenabla-com/hayashi: A Rust-based diagramming-as-code API that allows you to turn your .tfstate file into details architecture boundary diagrams.](https://github.com/usenabla-com/hayashi)
+
+- 🔄 **Automatic Diagram Generation**: Parse Terraform state files and generate Mermaid flowchart diagrams
+- 🔒 **Security Boundary Visualization**: Clearly delineate FedRAMP authorization boundaries and trust zones
+- 📋 **Compliance Controls**: Annotate resources with relevant NIST 800-53 controls (SC-7, AU-2, AC-6, CM-2, etc.)
+- 🏗️ **Architecture Tiers**: Automatically organize resources into public, application, and data tiers
+- 🎨 **Smart Styling**: Color-coded boundaries and security zones with AWS service icons
+- 🤖 **AI-Enhanced**: Uses Cloudflare Workers AI to generate clean, readable diagrams
